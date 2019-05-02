@@ -20,7 +20,7 @@ public class Calculator {
         for(int i = 0; i < coursesToAdd.size(); i++){
             // Index through coursesToAdd
             Course tempCourse = coursesToAdd.get(i);
-            totalGrades += tempCourse.getGrade();
+            totalGrades += tempCourse.getCreditHours() * tempCourse.getGrade();
             totalCredits += tempCourse.getCreditHours();
         }
         gpa = totalGrades / totalCredits;
